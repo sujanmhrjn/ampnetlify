@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html ⚡>
+	<head>
+		<meta charset="utf-8" />
+		<title>Sample document</title>
+		<link rel="canonical" href="./regular-html-version.html" />
+		<meta
+			name="viewport"
+			content="width=device-width,minimum-scale=1,initial-scale=1"
+		/>
+		<!-- <link
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.1/css/font-awesome.min.css"
+			rel="stylesheet"
+			type="text/css"
+		/> -->
+
+		<script type="application/ld+json">
+			{
+				"@context": "http://schema.org",
+				"@type": "NewsArticle",
+				"headline": "Article headline",
+				"image": ["thumbnail1.jpg"],
+				"datePublished": "2015-02-05T08:00:00+08:00"
+			}
+		</script>
+		<script
+			async
+			custom-element="amp-carousel"
+			src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"
+		></script>
+		<script
+			async
+			custom-element="amp-ad"
+			src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"
+		></script>
+		<style amp-boilerplate>
+			body {
+				-webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+				-moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+				-ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+				animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+			}
+			@-webkit-keyframes -amp-start {
+				from {
+					visibility: hidden;
+				}
+				to {
+					visibility: visible;
+				}
+			}
+			@-moz-keyframes -amp-start {
+				from {
+					visibility: hidden;
+				}
+				to {
+					visibility: visible;
+				}
+			}
+			@-ms-keyframes -amp-start {
+				from {
+					visibility: hidden;
+				}
+				to {
+					visibility: visible;
+				}
+			}
+			@-o-keyframes -amp-start {
+				from {
+					visibility: hidden;
+				}
+				to {
+					visibility: visible;
+				}
+			}
+			@keyframes -amp-start {
+				from {
+					visibility: hidden;
+				}
+				to {
+					visibility: visible;
+				}
+			}
+		</style>
+		<noscript>
+			<style amp-boilerplate>
+				body {
+					-webkit-animation: none;
+					-moz-animation: none;
+					-ms-animation: none;
+					animation: none;
+				}
+			</style>
+		</noscript>
+		<script async src="https://cdn.ampproject.org/v0.js"></script>
+		<script
+			async
+			custom-element="amp-form"
+			src="https://cdn.ampproject.org/v0/amp-form-0.1.js"
+		></script>
+		<script
+			async
+			custom-template="amp-mustache"
+			src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"
+		></script>
+		<script
+			async
+			custom-element="amp-bind"
+			src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"
+		></script>
+
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+			rel="stylesheet"
+		/>
+
+		<style amp-custom>
+			html,
+			body,
+			* {
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+				font-family: "Montserrat", sans-serif;
+				font-weight: 400;
+			}
+
+			h1 {
+				font-weight: 800;
+				font-size: 25px;
+				margin-bottom: 10px;
+				color: rgb(0, 119, 255);
+				text-transform: uppercase;
+			}
+			p {
+				font-size: 14px;
+				color: #666;
+			}
+			.amp-form {
+				max-width: 600px;
+				margin: 50px auto;
+				border: 1px solid #dedede;
+				padding: 25px;
+			}
+			form {
+				margin-top: 40px;
+			}
+
+			.flex {
+				display: flex;
+				margin: 0 -15px;
+			}
+			.inline-flex {
+				display: inline-flex;
+			}
+			.items-center {
+				align-items: center;
+			}
+
+			.col {
+				padding: 15px;
+				flex: 1;
+			}
+			fieldset {
+				border: 1px solid #dedede;
+				padding: 25px;
+				margin-bottom: 30px;
+			}
+			legend {
+				font-size: 14px;
+			}
+			.form-group {
+				margin-bottom: 15px;
+				position: relative;
+			}
+			label {
+				font-size: 14px;
+				color: #666;
+				display: block;
+				margin-bottom: 5px;
+				cursor: pointer;
+			}
+			.-mx-15 {
+				margin: 0 -15px;
+			}
+			.mb-0 {
+				margin-bottom: 0;
+			}
+			.ml-10 {
+				margin-left: 10px;
+			}
+			.form-group .form-control {
+				width: 100%;
+				display: block;
+				height: 40px;
+				border: 1px solid #dedede;
+				padding: 0 15px;
+			}
+			[visible-when-invalid] {
+				font-size: 12px;
+			}
+			.form-group .form-control.user-invalid {
+				border-color: #f00;
+			}
+			.input-hidden {
+				position: absolute;
+				top: 0;
+				height: 0;
+				left: 0;
+				width: 0;
+				padding: 0;
+				overflow: hidden;
+				border: none;
+				opacity: 0;
+			}
+
+			.button {
+				height: 45px;
+				width: 120px;
+				border: none;
+				background-color: rgb(0, 119, 255);
+				color: #fff;
+				font-weight: 700;
+				text-transform: uppercase;
+				cursor: pointer;
+			}
+			.button:hover {
+				background-color: rgb(4, 88, 184);
+			}
+
+			.tab-nav {
+				display: flex;
+				margin: 25px -16px;
+				justify-content: center;
+			}
+			.tab-item {
+				padding: 0 35px;
+				height: 40px;
+				font-size: 14px;
+				font-weight: 700;
+				text-transform: uppercase;
+				border: 1px solid #dedede;
+				margin: 0 5px;
+				cursor: pointer;
+				line-height: 40px;
+			}
+
+			.tab-item.active,
+			.tab-item:hover {
+				background-color: rgb(4, 88, 184);
+				color: #fff;
+				border-color: rgb(4, 88, 184);
+			}
+
+			.tab-block {
+				display: none;
+			}
+			.tab-block.active {
+				display: block;
+			}
+			.input-with-icon {
+				position: relative;
+			}
+			.input-with-icon.pos-right-icon .img-icon {
+				position: absolute;
+				right: 15px;
+				top: 10px;
+				cursor: pointer;
+			}
+			.success,
+			.error {
+				padding: 7px 25px;
+				display: block;
+				font-size: 14px;
+				margin-top: 20px;
+			}
+			.success {
+				background-color: rgb(113, 190, 113);
+				color: rgb(2, 87, 20);
+			}
+			.error {
+				background-color: rgb(238, 87, 87);
+				color: rgb(109, 8, 8);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="amp-form">
+			<h1>AMP Signup FORM</h1>
+			<p>Please Fill out the following form details.</p>
+			<form
+				method="post"
+				class="form"
+				action-xhr="submitform.php"
+				target="_top"
+				custom-validation-reporting="show-all-on-submit"
+			>
+				<fieldset>
+					<legend>User Information</legend>
+
+					<div class="flex">
+						<div class="col">
+							<div class="form-group">
+								<label>First Name*</label>
+								<input
+									type="text"
+									class="form-control"
+									name="firstName"
+									id="validate-firstname"
+									placeholder="Enter First Name"
+									required
+								/>
+								<span
+									visible-when-invalid="valueMissing"
+									validation-for="validate-firstname"
+									>Please enter your first name</span
+								>
+							</div>
+						</div>
+						<!-- /.col -->
+						<div class="col">
+							<div class="form-group">
+								<label>Last Name*</label>
+								<input
+									type="text"
+									class="form-control"
+									name="lastName"
+									id="validate-lastname"
+									placeholder="Enter Last Name"
+									required
+								/>
+								<span
+									visible-when-invalid="valueMissing"
+									validation-for="validate-lastname"
+									>Please enter your last name</span
+								>
+							</div>
+						</div>
+						<!-- /.col -->
+					</div>
+					<!-- /.flex -->
+
+					<div class="form-group">
+						<label>Email Address*</label>
+						<input
+							type="email"
+							class="form-control"
+							name="emailAddress"
+							id="validate-email"
+							placeholder="Enter Email Address"
+							pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*"
+							required
+						/>
+						<span
+							visible-when-invalid="valueMissing"
+							validation-for="validate-email"
+						></span>
+						<span
+							visible-when-invalid="typeMismatch"
+							validation-for="validate-email"
+						></span>
+						<span
+							visible-when-invalid="patternMismatch"
+							validation-for="validate-email"
+						>
+							Email address pattern mismatched
+						</span>
+					</div>
+					<!-- /.form-group -->
+					<div class="form-group">
+						<label>Date of Birth</label>
+						<input
+							type="date"
+							class="form-control"
+							name="dob"
+							id="validate-dob"
+							placeholder="1990-01-01"
+							required
+						/>
+						<span
+							visible-when-invalid="valueMissing"
+							validation-for="validate-dob"
+							>Please select your date of birth</span
+						>
+					</div>
+				</fieldset>
+
+				<input type="submit" value="Submit" class="button" />
+				<div submit-success>
+					<template type="amp-mustache"> Form Submitted! Thanks. </template>
+				</div>
+
+				<div submit-error>
+					<template type="amp-mustache"> Error!, please try again. </template>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>
