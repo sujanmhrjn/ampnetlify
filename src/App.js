@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
-import api from "./utils/api";
+import React from "react";
+
 const App = () => {
-	const [data, setData] = useState(null);
 	const detail = {
 		name: "Sujan Maharjan",
 		email: "sujan@gmail.com",
@@ -9,7 +8,6 @@ const App = () => {
 	};
 	console.log(detail);
 
-	console.log(data);
 	return <div>Hello World</div>;
 };
 
