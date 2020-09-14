@@ -1,8 +1,10 @@
 [build]
-   functions = "functions"
-   command = "npm run build"
-   publish = "build"
+  functions = "functions"
+  # This will be run the site build
+  command = "npm run build"
+  # This is the directory is publishing to netlify's CDN
+  publish = "build"
 
 [dev]
-    # Local Dev command. npm start
-    command = "react-scripts start"
+  # Local dev command. A.k.a npm start
+  command = "react-scripts start"

@@ -1,22 +1,30 @@
 import React, { Component } from "react";
-
-class App extends Component {
-	constructor(props) {
-		super(props);
-	}
+import api from "./utils/api";
+export default class App extends Component {
+	state = {
+		todos: [],
+		showMenu: false,
+	};
 	componentDidMount() {
-		const detail = {
-			name: "Sujan Maharjan",
-			email: "sujan@gmail.com",
-			date: "1993-11-03",
-		};
-		console.log(detail);
-
-		console.log(data);
+		this.saveTodo();
 	}
+	saveTodo = (e) => {
+		const formInfo = {
+			firstName: "Sujan",
+			lastName: "Maharjan",
+			email: "sujan-28@gmail.com",
+			dob: "1111-11-11",
+		};
+		api
+			.create(formInfo)
+			.then((response) => {
+				console.log(response);
+			})
+			.catch((e) => {
+				console.log("An API error occurred", e);
+			});
+	};
 	render() {
-		return <div>Hello World</div>;
+		return <div className="app">App</div>;
 	}
 }
-
-export default App;

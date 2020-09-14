@@ -2,23 +2,21 @@
 const faunadb = require("faunadb");
 const q = faunadb.query;
 
-const client = new faunadb.Client({
-	secret: process.env.FAUNADB_SERVER_SECRET,
-});
-
 /* export our lambda function as named "handler" export */
 exports.handler = async (event, context) => {
+	/* configure faunaDB Client with our secret */
+	const client = new faunadb.Client({
+		secret: process.env.FAUNADB_SERVER_SECRET,
+	});
 	/* parse the string body into a useable JS object */
 	const data = JSON.parse(event.body);
-	console.log("Function `create` invoked", data);
-	const item = {
-		data,
+	console.log("Function `Form Details-create` invoked", data);
+	const formData = {
+		data: data,
 	};
-
-	console.log(data);
 	/* construct the fauna query */
 	return client
-		.query(q.Create(q.Ref("classes/items"), item))
+		.query(q.Create(q.Ref("classes/formDetails"), formData))
 		.then((response) => {
 			console.log("success", response);
 			/* Success! return the response with statusCode 200 */

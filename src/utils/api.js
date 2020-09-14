@@ -1,5 +1,7 @@
+/* Api methods to call /functions */
+
 const create = (data) => {
-	return fetch("/.netlify/functions/create", {
+	return fetch("/.netlify/functions/formdetails-create", {
 		body: JSON.stringify(data),
 		method: "POST",
 	}).then((response) => {
