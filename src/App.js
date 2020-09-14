@@ -1,14 +1,22 @@
-import React from "react";
+import React, { Component } from "react";
 
-const App = () => {
-	const detail = {
-		name: "Sujan Maharjan",
-		email: "sujan@gmail.com",
-		date: "1993-11-03",
-	};
-	console.log(detail);
+class App extends Component {
+	constructor(props) {
+		super(props);
+	}
+	componentDidMount() {
+		const detail = {
+			name: "Sujan Maharjan",
+			email: "sujan@gmail.com",
+			date: "1993-11-03",
+		};
+		console.log(detail);
 
-	return <div>Hello World</div>;
-};
+		console.log(data);
+	}
+	render() {
+		return <div>Hello World</div>;
+	}
+}
 
 export default App;
