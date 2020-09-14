@@ -7,19 +7,9 @@ const App = () => {
 		email: "sujan@gmail.com",
 		date: "1993-11-03",
 	};
+	console.log(detail);
 
-	useEffect(() => {
-		api
-			.create(detail)
-			.then((response) => {
-				console.log(response);
-
-				setData(detail);
-			})
-			.catch((e) => {
-				console.log("An API error occurred", e);
-			});
-	}, []);
+	console.log(data);
 	return <div>Hello World</div>;
 };
 
