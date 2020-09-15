@@ -20,12 +20,7 @@ export default class App extends Component {
 		this.saveTodo();
 	}
 	saveTodo = (e) => {
-		const formInfo = {
-			firstName: "Sujan",
-			lastName: "Maharjan",
-			email: "sujan-28@gmail.com",
-			dob: "1111-11-11",
-		};
+		const formInfo = this.state.formInfo;
 		api
 			.create(formInfo)
 			.then((response) => {
