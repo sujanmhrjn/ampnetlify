@@ -42,7 +42,7 @@ function createFaunaDB(key) {
 		.query(q.Create(q.Ref("classes"), { name: "formDetails" }))
 		.then(() => {
 			return client.query(
-				q.Create(q.Ref("indexes"), {
+				q.Create(q.Ref("classes"), {
 					name: "all_formDetails",
 					source: q.Ref("classes/formDetails"),
 				})
