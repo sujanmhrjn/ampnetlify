@@ -53,7 +53,6 @@ export default class App extends Component {
 		if (Object.keys(errors).length === 0) {
 			this.saveTodo();
 		} else {
-			alert("Please fill all the fields");
 		}
 
 		return false;
