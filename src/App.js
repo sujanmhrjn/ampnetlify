@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./App.css";
 import api from "./utils/api";
 export default class App extends Component {
 	constructor(props) {
@@ -16,9 +17,7 @@ export default class App extends Component {
 			},
 		};
 	}
-	componentDidMount() {
-		this.saveTodo();
-	}
+
 	saveTodo = (e) => {
 		const formInfo = this.state.formInfo;
 		api
@@ -69,6 +68,7 @@ export default class App extends Component {
 		});
 	};
 	render() {
+		const error = this.state.errors;
 		return (
 			<div className="app">
 				<form method="post" className="form" onSubmit={this.handleFormSubmit}>
@@ -87,6 +87,7 @@ export default class App extends Component {
 										placeholder="Enter First Name"
 										onChange={this.handleInputChange}
 									/>
+									{error?.firstname && <p>{error.firstname}</p>}
 								</div>
 							</div>
 
@@ -101,6 +102,7 @@ export default class App extends Component {
 										placeholder="Enter Last Name"
 										onChange={this.handleInputChange}
 									/>
+									{error?.lastname && <p>{error.lastname}</p>}
 								</div>
 							</div>
 						</div>
@@ -115,6 +117,7 @@ export default class App extends Component {
 								placeholder="Enter Email Address"
 								onChange={this.handleInputChange}
 							/>
+							{error?.email && <p>{error.email}</p>}
 						</div>
 
 						<div className="form-group">
@@ -127,6 +130,7 @@ export default class App extends Component {
 								placeholder="1990-01-01"
 								onChange={this.handleInputChange}
 							/>
+							{error?.dob && <p>{error.dob}</p>}
 						</div>
 					</fieldset>
 					<input type="submit" value="Submit" className="button" />
