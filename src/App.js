@@ -50,8 +50,10 @@ export default class App extends Component {
 		const validateError = this.handleFormValidation(this.state.formInfo);
 		const errors = validateError;
 		this.setState({ errors });
-		if (Object.keys(this.state.errors).length === 0) {
+		if (Object.keys(errors).length === 0) {
 			this.saveTodo();
+		} else {
+			alert("Please fill all the fields");
 		}
 
 		return false;
