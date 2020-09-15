@@ -9,6 +9,12 @@ const create = (data) => {
 	});
 };
 
+const readAll = () => {
+	return fetch("/.netlify/functions/formdetails-read").then((response) => {
+		return response.json();
+	});
+};
 export default {
 	create: create,
+	read: readAll,
 };

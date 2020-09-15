@@ -18,6 +18,10 @@ export default class App extends Component {
 		};
 	}
 
+	componentDidMount() {
+		console.log(api.read());
+	}
+
 	saveTodo = (e) => {
 		const formInfo = this.state.formInfo;
 		api
